@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8032290017060961824}
   - component: {fileID: 887302140612607150}
   - component: {fileID: 887302140612607151}
+  - component: {fileID: 955367193328803712}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -107,6 +108,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &955367193328803712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3679352470149789413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa304cdcf5fe7f54bb986473b8421174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4016061513369176718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,10 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3323286932317266762}
     m_Modifications:
-    - target: {fileID: 100018, guid: d288a0e4a2d923b46898986e979da643, type: 3}
-      propertyPath: m_Name
-      value: Characters_POLYGON_Knights
-      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: d288a0e4a2d923b46898986e979da643, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -161,6 +170,10 @@ PrefabInstance:
     - target: {fileID: 400018, guid: d288a0e4a2d923b46898986e979da643, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: d288a0e4a2d923b46898986e979da643, type: 3}
+      propertyPath: m_Name
+      value: Characters_POLYGON_Knights
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d288a0e4a2d923b46898986e979da643, type: 3}
