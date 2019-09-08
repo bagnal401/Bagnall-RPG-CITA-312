@@ -6,9 +6,11 @@ namespace RPG.Core
 {
     public class FollowCamera : MonoBehaviour
     {
+        // Configurations
         [SerializeField] Transform target;
 
-        // Update is called once per frame
+        // LateUpdate is called once per frame. LateUpdate will check the position of the player
+        // and will change its position to follow the player.
         void LateUpdate()
         {
             transform.position = target.position;
