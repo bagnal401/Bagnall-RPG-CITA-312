@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 887302140612607151}
   - component: {fileID: 955367193328803712}
   - component: {fileID: 6409452132935720594}
+  - component: {fileID: 8469760013356504133}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -97,10 +98,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.3
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 5.66
+  m_Acceleration: 50
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 10000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -133,6 +134,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d784f962c8e14984f9cb37f576c893b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponRange: 2
+--- !u!95 &8469760013356504133
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3679352470149789413}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: d288a0e4a2d923b46898986e979da643, type: 3}
+  m_Controller: {fileID: 9100000, guid: 8a5dbb2a763a91743be3850a0dfad3f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4016061513369176718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140,6 +161,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3323286932317266762}
     m_Modifications:
+    - target: {fileID: 100018, guid: d288a0e4a2d923b46898986e979da643, type: 3}
+      propertyPath: m_Name
+      value: Characters_POLYGON_Knights
+      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: d288a0e4a2d923b46898986e979da643, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -183,10 +208,6 @@ PrefabInstance:
     - target: {fileID: 400018, guid: d288a0e4a2d923b46898986e979da643, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100018, guid: d288a0e4a2d923b46898986e979da643, type: 3}
-      propertyPath: m_Name
-      value: Characters_POLYGON_Knights
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d288a0e4a2d923b46898986e979da643, type: 3}
