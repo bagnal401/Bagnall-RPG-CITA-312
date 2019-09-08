@@ -8,7 +8,7 @@ namespace RPG.Combat
     {
         public void Attack(CombatTarget target)
         {
-            print("Taste my blade of peace and harmony!");
+            print("Taste my attack of peace and harmony!");
         }
     }
 }
