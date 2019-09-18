@@ -15,7 +15,7 @@ namespace RPG.Combat
 
         // Target should be able to change position at least.
         Health target;
-        float timeSinceLastAttack = 0;
+        float timeSinceLastAttack = Mathf.Infinity;
 
         private void Update()
         {

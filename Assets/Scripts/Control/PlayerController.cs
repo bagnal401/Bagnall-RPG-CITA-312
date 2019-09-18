@@ -1,6 +1,7 @@
 ﻿using RPG.Movement;
 using System;
 using RPG.Combat;
+using RPG.Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,10 +11,17 @@ namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour
     {
+        Health health;
+
+        private void Start()
+        {
+            health = GetComponent<Health>();
+        }
         // Update is called once per frame. Update will constantly check
         // whether the player is in combat or moving.
         void Update()
         {
+            if (health.IsDead()) return;
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
         }

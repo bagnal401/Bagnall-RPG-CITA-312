@@ -13,16 +13,20 @@ namespace RPG.Movement
 
         // Assigning NavMeshAgent a variable.
         NavMeshAgent navMeshAgent;
+        Health health;
 
         // Start calls the NavMeshAgent component.
         private void Start()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
+            health = GetComponent<Health>();
         }
 
         // Update is called once per frame and calls the UpdateAnimator method.
         void Update()
         {
+            navMeshAgent.enabled = !health.IsDead();
+
             UpdateAnimator();
         }
 
