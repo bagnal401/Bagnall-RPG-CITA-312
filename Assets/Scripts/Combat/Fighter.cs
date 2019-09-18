@@ -48,15 +48,25 @@ namespace RPG.Combat
             if (timeSinceLastAttack > timeBetweenAttacks)
             {
                 // This will trigger the Hit event.
+                TriggerAttack();
                 GetComponent<Animator>().SetTrigger("attack");
                 timeSinceLastAttack = 0;
             }
 
         }
 
+        private void TriggerAttack()
+        {
+            GetComponent<Animator>().ResetTrigger("attack");
+        }
+
         // Animation event
         void Hit()
         {
+            if (target == null)
+            {
+                return;
+            }
             target.TakeDamage(weaponDamage);
         }
 
@@ -88,10 +98,14 @@ namespace RPG.Combat
         // Calls the Cancel method, which will cancel movement when the target is null.
         public void Cancel()
         {
-            GetComponent<Animator>().SetTrigger("stopAttack");
+            StopAttack();
             target = null;
         }
 
-
+        private void StopAttack()
+        {
+            GetComponent<Animator>().ResetTrigger("attack");
+            GetComponent<Animator>().SetTrigger("stopAttack");
+        }
     }
 }
