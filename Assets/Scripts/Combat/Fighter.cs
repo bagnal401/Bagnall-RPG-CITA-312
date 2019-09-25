@@ -31,7 +31,7 @@ namespace RPG.Combat
             // then the player will move to be in range.
             if (!GetIsInRange())
             {
-                GetComponent<Mover>().MoveTo(target.transform.position);
+                GetComponent<Mover>().MoveTo(target.transform.position, 1f);
             }
             // Otherwise the player's movement towards the target will cancel
             // and regular movement will begin.

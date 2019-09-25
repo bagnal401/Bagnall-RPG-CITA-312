@@ -10,6 +10,7 @@ namespace RPG.Movement
     {
         // Configurations.
         [SerializeField] Transform target;
+        [SerializeField] float maxSpeed = 6f;
 
         // Assigning NavMeshAgent a variable.
         NavMeshAgent navMeshAgent;
@@ -31,16 +32,17 @@ namespace RPG.Movement
         }
 
         // StartMoveAction calls the ActionScheduler to start its moving schedule.
-        public void StartMoveAction(Vector3 destination)
+        public void StartMoveAction(Vector3 destination, float speedFraction)
         {
             GetComponent<ActionScheduler>().StartAction(this);
-            MoveTo(destination);
+            MoveTo(destination, speedFraction);
         }
 
         // If the navMeshAgent is not stopped, then the player moves to the destination.
-        public void MoveTo(Vector3 destination)
+        public void MoveTo(Vector3 destination, float speedFraction)
         {
             GetComponent<NavMeshAgent>().destination = destination;
+            navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
             navMeshAgent.isStopped = false;
         }
 
