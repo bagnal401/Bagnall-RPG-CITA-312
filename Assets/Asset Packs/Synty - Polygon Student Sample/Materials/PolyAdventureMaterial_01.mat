@@ -75,11 +75,13 @@ Material:
     - _Occlusion: 7.5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _ShadowStrength: 1
     - _Shininess: 0.078125
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SquashAmount: 1
     - _SrcBlend: 1
+    - _TranslucencyViewDependency: 0.7
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
@@ -87,5 +89,6 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _TranslucencyColor: {r: 0.73, g: 0.85, b: 0.41, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
