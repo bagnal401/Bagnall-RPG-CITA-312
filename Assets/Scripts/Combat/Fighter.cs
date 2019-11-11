@@ -86,7 +86,22 @@ namespace RPG.Combat
             {
                 return;
             }
+
+            if (currentWeapon.HasProjectile())
+            {
+                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+            }
+            else
+            {
+                target.TakeDamage(currentWeapon.GetDamage());
+            }
+
             target.TakeDamage(currentWeapon.GetDamage());
+        }
+
+        void Shoot()
+        {
+            Hit();
         }
 
         // Calls GetIsInRange, which wil determine if the player's position is
