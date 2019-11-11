@@ -7,14 +7,26 @@ public class Projectile : MonoBehaviour
 {
     
     [SerializeField] float speed = 1;
+    [SerializeField] bool isHoming;
     Health target = null;
     float damage = 0;
+
+    private void Start()
+    {
+        // turn this off to activate homing arrows
+        transform.LookAt(GetAimLocation());
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (target == null) return;
-
-        transform.LookAt(GetAimLocation());
+        if (isHoming && !target.IsDead())
+        {
+            transform.LookAt(GetAimLocation());
+        }
+        //comment this out to have non-homing arrows, can dodge them
+        //transform.LookAt(GetAimLocation());
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
@@ -37,6 +49,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Health>() != target) return;
+        if (target.IsDead()) return;
         target.TakeDamage(damage);
         Destroy(gameObject);
     }
