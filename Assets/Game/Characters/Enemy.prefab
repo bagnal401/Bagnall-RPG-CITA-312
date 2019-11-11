@@ -190,6 +190,22 @@ PrefabInstance:
       propertyPath: handTransform
       value: 
       objectReference: {fileID: 7835475808528007261}
+    - target: {fileID: -7221788288218194424, guid: ceadc28ea1eaddd479e8a9ff47969a35,
+        type: 3}
+      propertyPath: leftHandTransform
+      value: 
+      objectReference: {fileID: 7835475808528080991}
+    - target: {fileID: -7221788288218194424, guid: ceadc28ea1eaddd479e8a9ff47969a35,
+        type: 3}
+      propertyPath: rightHandTransform
+      value: 
+      objectReference: {fileID: 7835475808528007261}
+    - target: {fileID: -7221788288218194424, guid: ceadc28ea1eaddd479e8a9ff47969a35,
+        type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: c6fd355e972cb864eba3c0168dcb0f33,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceadc28ea1eaddd479e8a9ff47969a35, type: 3}
 --- !u!1 &2486596498968420453 stripped
@@ -289,6 +305,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+--- !u!4 &7835475808528080991 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 481036, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 7835475808528168787}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7835475808528007261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423694, guid: 30cf93deff988e74e88a144bd2127c18,

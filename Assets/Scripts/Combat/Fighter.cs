@@ -15,8 +15,9 @@ namespace RPG.Combat
         
         [SerializeField] Weapon defaultWeapon = null;
         
-        [SerializeField] Transform handTransform = null;
-        
+        [SerializeField] Transform rightHandTransform = null;
+        [SerializeField] Transform leftHandTransform = null;
+
 
         // Target should be able to change position at least.
         Health target;
@@ -32,7 +33,7 @@ namespace RPG.Combat
         {
             currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
-            weapon.Spawn(handTransform, animator);
+            weapon.Spawn(rightHandTransform, leftHandTransform, animator);
         }
 
         private void Update()
