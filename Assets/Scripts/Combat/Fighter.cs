@@ -13,7 +13,7 @@ namespace RPG.Combat
         
         [SerializeField] float timeBetweenAttacks = 1f;
         
-        [SerializeField] Weapon weapon = null;
+        [SerializeField] Weapon defaultWeapon = null;
         
         [SerializeField] Transform handTransform = null;
         
@@ -21,15 +21,16 @@ namespace RPG.Combat
         // Target should be able to change position at least.
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
+        Weapon currentWeapon;
 
         private void Start()
         {
-            SpawnWeapon();
+            EquipWeapon(defaultWeapon);
         }
 
-        private void SpawnWeapon()
+        public void EquipWeapon(Weapon weapon)
         {
-            if (weapon == null) return;
+            currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
             weapon.Spawn(handTransform, animator);
         }
@@ -84,14 +85,14 @@ namespace RPG.Combat
             {
                 return;
             }
-            target.TakeDamage(weapon.GetDamage());
+            target.TakeDamage(currentWeapon.GetDamage());
         }
 
         // Calls GetIsInRange, which wil determine if the player's position is
         // less than the weapon range.
         private bool GetIsInRange()
         {
-            return Vector3.Distance(transform.position, target.transform.position) < weapon.GetRange();
+            return Vector3.Distance(transform.position, target.transform.position) < currentWeapon.GetRange();
         }
 
         public bool CanAttack(GameObject combatTarget)
