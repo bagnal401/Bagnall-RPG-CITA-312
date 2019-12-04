@@ -67,6 +67,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7056124610058708200, guid: e8bb2aea11f8d6749a147bfcf65c07df,
+        type: 3}
+      propertyPath: destroyOnHit.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056124610058708200, guid: e8bb2aea11f8d6749a147bfcf65c07df,
+        type: 3}
+      propertyPath: hitEffect
+      value: 
+      objectReference: {fileID: 8768068263729018272, guid: 1530b1d40a9c4f747824cbae49ba8a36,
+        type: 3}
+    - target: {fileID: 7056124610058708200, guid: e8bb2aea11f8d6749a147bfcf65c07df,
+        type: 3}
+      propertyPath: destroyOnHit.Array.data[0]
+      value: 
+      objectReference: {fileID: 2962782935671270470}
     - target: {fileID: 4028947298187178404, guid: e8bb2aea11f8d6749a147bfcf65c07df,
         type: 3}
       propertyPath: m_Parameters.colorGradient.key0.r
@@ -129,3 +145,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8bb2aea11f8d6749a147bfcf65c07df, type: 3}
+--- !u!1 &2962782935671270470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8924048429845158512, guid: e8bb2aea11f8d6749a147bfcf65c07df,
+    type: 3}
+  m_PrefabInstance: {fileID: 5964311416261047862}
+  m_PrefabAsset: {fileID: 0}

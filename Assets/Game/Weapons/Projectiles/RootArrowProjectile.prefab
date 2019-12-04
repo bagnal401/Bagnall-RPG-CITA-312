@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 7056124610058708200}
   - component: {fileID: 2917903006326684064}
   m_Layer: 0
-  m_Name: ArrowProjectile
+  m_Name: RootArrowProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,6 +192,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  isHoming: 0
+  hitEffect: {fileID: 8768068263729018272, guid: 1530b1d40a9c4f747824cbae49ba8a36,
+    type: 3}
+  maxLifeTime: 10
+  destroyOnHit:
+  - {fileID: 8924048429845158512}
+  lifeAfterImpact: 2
 --- !u!65 &2917903006326684064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -212,10 +219,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3528097521482701501}
     m_Modifications:
-    - target: {fileID: 1659504181823486, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
-      propertyPath: m_Name
-      value: Simple Arrow
-      objectReference: {fileID: 0}
     - target: {fileID: 4750687242688692, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -260,8 +263,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1659504181823486, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
+      propertyPath: m_Name
+      value: Simple Arrow
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
+--- !u!1 &8924048429845158512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1659504181823486, guid: c7f49c6920d49ba468b083941d79f2c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 8925417083899960718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8920948293127980346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4750687242688692, guid: c7f49c6920d49ba468b083941d79f2c0,
